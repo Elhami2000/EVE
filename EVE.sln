@@ -1,0 +1,30 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31911.196
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EVE", "EVE\EVE.csproj", "{5F2BB1E3-62D8-4A38-9FA7-396D2A9A3D96}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{EDA3D7F9-0D12-46AD-98DD-C7DB85453EF1}"
+	ProjectSection(SolutionItems) = preProject
+		.editorconfig = .editorconfig
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{5F2BB1E3-62D8-4A38-9FA7-396D2A9A3D96}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5F2BB1E3-62D8-4A38-9FA7-396D2A9A3D96}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5F2BB1E3-62D8-4A38-9FA7-396D2A9A3D96}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5F2BB1E3-62D8-4A38-9FA7-396D2A9A3D96}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {E448A715-6295-46EB-85F3-97DFE2197B05}
+	EndGlobalSection
+EndGlobal

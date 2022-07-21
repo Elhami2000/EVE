@@ -1,0 +1,93 @@
+﻿
+@model NewBusInfoVM
+@using EVE.Data;
+
+@{
+    ViewData["Title"] = "Create a new bus line";
+}
+
+<div class="row">
+    <div class="col-md-8 offset-2">
+        <p>
+            <h4>Create a new bus line</h4>
+        </p>
+
+        <div class="row">
+            <div class="col-md-8 offset-2">
+                <form asp-action="Create">
+                    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label asp-for="Pershkrimi" class="control-label"></label>
+                                <input asp-for="Pershkrimi" class="form-control" />
+                                <span asp-validation-for="Pershkrimi" class="text-danger"></span>
+                            </div>
+                            <div class="form-group">
+                                <label asp-for="StartLineDate" class="control-label"></label>
+                                <input asp-for="StartLineDate" type="date" class="form-control" />
+                                <span asp-validation-for="StartLineDate" class="text-danger"></span>
+                            </div>
+                            <div class="form-group">
+                                <label asp-for="EndLineDate" class="control-label"></label>
+                                <input asp-for="EndLineDate" type="date" class="form-control" />
+                                <span asp-validation-for="EndLineDate" class="text-danger"></span>
+                            </div>
+                            <div class="form-group">
+                                <label asp-for="TicketPrice" class="control-label"></label>
+                                <input asp-for="TicketPrice" type="number" class="form-control" />
+                                <span asp-validation-for="TicketPrice" class="text-danger"></span>
+                            </div>
+                            <div class="form-group">
+                                <label asp-for="BusPhoto" class="control-label"></label>
+                                <input asp-for="BusPhoto" class="form-control" />
+                                <span asp-validation-for="BusPhoto" class="text-danger"></span>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label asp-for="BusCategory" class="control-label"></label>
+                                <select asp-for="BusCategory" class="form-control" asp-items="Html.GetEnumSelectList<BusCategory>()"></select>
+                                <span asp-validation-for="BusCategory" class="text-danger"></span>
+                            </div>
+                            <div class="form-group">
+                                <label asp-for="BusDriverIDs" class="control-label"></label>
+                                <select asp-for="BusDriverIDs" class="form-control" asp-items="ViewBag.BusDrivers" multiple></select>
+                                <span asp-validation-for="BusDriverIDs" class="text-danger"></span>
+                            </div>
+                        </div>
+                        <div class="col-md-12">
+                            <div class="form-group">
+                                <label asp-for="BusType" class="control-label"></label>
+                                <textarea asp-for="BusType" class="form-control"></textarea>
+                                <span asp-validation-for="BusType" class="text-danger"></span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4 offset-4 text-center">
+                        <img width="100%" id="BusPhotoURLPreview" />
+                    </div>
+
+                    <div class="form-group">
+                        <input type="submit" value="Create" class="btn btn-outline-success float-right" />
+                        <a class="btn btn-outline-secondary" asp-action="Index">Show all</a>
+                    </div>
+
+                </form>
+
+            </div>
+        </div>
+
+    </div>
+</div>
+
+@section Scripts{
+    <script>
+        $("#BusPhoto").on("change", function () {
+            var output = document.getElementById("BusPhotoURLPreview");
+            output.src = $(this).val();
+        })
+    </script>
+}
